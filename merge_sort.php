@@ -48,6 +48,11 @@ function merge(array $esquerda, array $direita): array
     return $resultado;
 }
 
+// Demonstração só quando o arquivo é executado direto; incluído pelos testes, expõe apenas as funções.
+if (realpath($_SERVER['SCRIPT_FILENAME'] ?? '') !== __FILE__) {
+    return;
+}
+
 $vetor = [38, 12, 27, 43, 9, 31, 18, 25];
 // No terminal "<br>" apareceria literal; no navegador a quebra de linha some.
 $quebra = PHP_SAPI === 'cli' ? PHP_EOL : '<br>';

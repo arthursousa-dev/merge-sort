@@ -33,3 +33,13 @@ Depois da ordenacao:
 ```
 
 No terminal a quebra de linha é `PHP_EOL`; aberto no navegador (XAMPP ou `php -S localhost:8000`), o script usa `<br>`.
+
+## Testes
+
+```bash
+composer install
+vendor/bin/phpunit
+```
+
+Os testes cobrem vetores vazios, repetidos, negativos, já ordenados e invertidos, e comparam o resultado com o `sort()` nativo em 50 vetores aleatórios. O GitHub Actions roda a suíte a cada push.
+
