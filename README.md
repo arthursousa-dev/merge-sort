@@ -32,4 +32,4 @@ Depois da ordenacao:
 9 | 12 | 18 | 25 | 27 | 31 | 38 | 43
 ```
 
-A saída usa `<br>`, então também pode ser aberta no navegador via servidor local (XAMPP ou `php -S localhost:8000`).
+No terminal a quebra de linha é `PHP_EOL`; aberto no navegador (XAMPP ou `php -S localhost:8000`), o script usa `<br>`.

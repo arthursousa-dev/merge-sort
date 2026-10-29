@@ -49,15 +49,15 @@ function merge(array $esquerda, array $direita): array
 }
 
 $vetor = [38, 12, 27, 43, 9, 31, 18, 25];
+// No terminal "<br>" apareceria literal; no navegador a quebra de linha some.
+$quebra = PHP_SAPI === 'cli' ? PHP_EOL : '<br>';
 
-echo "Antes da ordenacao:<br>";
+echo "Antes da ordenacao:" . $quebra;
 echo implode(" | ", $vetor);
 
 $ordenado = mergeSort($vetor);
 
-echo "<br><br>";
+echo $quebra . $quebra;
 
-echo "Depois da ordenacao:<br>";
-echo implode(" | ", $ordenado);
-
-?>
+echo "Depois da ordenacao:" . $quebra;
+echo implode(" | ", $ordenado) . $quebra;
